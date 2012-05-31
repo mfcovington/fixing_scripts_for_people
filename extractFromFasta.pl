@@ -1,5 +1,19 @@
-#!/usr/bin/perl
-
+#!/usr/bin/env perl
+# FILE_NAME.pl
+# Mike Covington
+# created: 2012-05-31
+# adapted from extractFromFasta.pl by Linnéa Smeds
+# Description: Extracts certain sequences from a fasta file. Either 
+#   a single sequence name is given, or a text file with 
+#   a list of names (type must be given as input, either
+#   "single" or "list" .
+#
+# Note: I've already written a script with this functionality. I prefer it.
+#   However, if you don't have BioPerl installed, this one will suffice.
+#
+use strict;
+use warnings;
+use autodie;
 
 # # # # # #
 # extractFromFasta.pl
@@ -15,9 +29,6 @@
 #
 # Example: extractFromFasta.pl mySeq.fa single "contig4" \
 #		>contig4.fa
-
-use strict;
-use warnings;
 
 # Input parameters
 my $scaffold_file = $ARGV[0];
